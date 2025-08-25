@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/home/static/css/main.1341bc95.css",
+    "main.js": "/home/static/js/main.21ebdf2c.js",
+    "static/js/453.dcd9efe2.chunk.js": "/home/static/js/453.dcd9efe2.chunk.js",
+    "static/media/group_pic2.jpg": "/home/static/media/group_pic2.cf9d674d4a46db1378e7.jpg",
+    "static/media/inigoguittap.jpg": "/home/static/media/inigoguittap.7d293766623a26952cbf.jpg",
+    "static/media/group_pic1.jpg": "/home/static/media/group_pic1.d8a2594d5c01672328d7.jpg",
+    "static/media/Reed_Elsevier_Logo.png": "/home/static/media/Reed_Elsevier_Logo.5b85478c0e284e096391.png",
+    "index.html": "/home/index.html",
+    "main.1341bc95.css.map": "/home/static/css/main.1341bc95.css.map",
+    "main.21ebdf2c.js.map": "/home/static/js/main.21ebdf2c.js.map",
+    "453.dcd9efe2.chunk.js.map": "/home/static/js/453.dcd9efe2.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1341bc95.css",
+    "static/js/main.21ebdf2c.js"
+  ]
+}
