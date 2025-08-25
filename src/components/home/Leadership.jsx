@@ -26,7 +26,18 @@ const Leadership = ({ heading, message, img, imageSize }) => {
                     width={imageSize.width}
                     height={imageSize.height}
                   />
-                  <Carousel.Caption>
+                  <Carousel.Caption
+                  style={{
+                        fontSize: '1rem',
+                        background: 'rgba(0, 0, 0, 0.7)',
+                        borderRadius: '8px',
+                        padding: '5px 10px',
+                        bottom: '20px',
+                        left: '50%',
+                        right: 'auto',
+                        transform: 'translateX(-50%)',
+                        maxWidth: '90%'
+                    }}>
                     <h3>{value.label}</h3>
                     <p>
                       {value.paragraph}

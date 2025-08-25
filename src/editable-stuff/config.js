@@ -5,31 +5,27 @@ const navBar = {
 
 // Main Body SECTION
 const mainBody = {
-  gradientColors: "#4484ce, #1ad7c0, #ff9b11, #9b59b6, #ff7f7f, #ecf0f1",
-  firstName: "Hashir",
+  gradientColors: "#4484ce, #1cb5e0, #00c9a7, #6c5ce7, #512da8, #0f2027",
+  firstName: "Inigo",
   middleName: "",
-  lastName: "Shoaib",
-  message: " Passionate about changing the world with technology. ",
+  lastName: "Guittap",
+  message: "Web and Mobile Applications | Data Analytics | Tech Enthusiast",
   icons: [
     {
       image: "fa-github",
-      url: "https://github.com/hashirshoaeb",
+      url: "https://github.com/inigovert",
     },
     {
       image: "fa-facebook",
-      url: "https://www.facebook.com/hashirshoaeb",
+      url: "https://www.facebook.com/inigo.guittap/",
     },
     {
       image: "fa-instagram",
-      url: "https://www.instagram.com/hashirshoaeb/",
+      url: "https://www.instagram.com/sampagitap/",
     },
     {
       image: "fa-linkedin",
-      url: "https://www.linkedin.com/in/hashirshoaeb/",
-    },
-    {
-      image: "fa-twitter",
-      url: "https://www.twitter.com/hashirshoaeb/",
+      url: "https://www.linkedin.com/in/inigo-guittap-39270b2a0/",
     },
   ],
 };
@@ -51,11 +47,11 @@ const mainBody = {
 const about = {
   show: true,
   heading: "About Me",
-  imageLink: require("../editable-stuff/hashirshoaeb.png"),
+  imageLink: require("../editable-stuff/inigoguittap.jpg"),
   imageSize: 375,
   message:
-    "My name is Hashir Shoaib. I’m a graduate of 2020 from National University of Sciences and Technology at Islamabad with a degree in Computer Engineering. I'm most passionate about giving back to the community, and my goal is to pursue this passion within the field of software engineering. In my free time I like working on open source projects.",
-  resume: "https://docs.google.com/document/d/13_PWdhThMr6roxb-UFiJj4YAFOj8e_bv3Vx9UHQdyBQ/edit?usp=sharing",
+    "Hi, I'm Inigo Guittap. A graduate of Far Eastern University, Institute of Technology with a degree in BSIT Web and Mobile Applications. I’m primarily focused on becoming a data analyst, with software engineering as a secondary interest. I enjoy working with data to uncover insights and support decision-making, and I also have experience building web and mobile applications. I'm always learning and looking for ways to solve real-world problems through technology.",
+  resume: "https://drive.google.com/file/d/1WfrrUL7UiFjTproVCXF8viJLIi_0hsfw/view?usp=sharing",
 };
 
 // PROJECTS SECTION
@@ -66,31 +62,31 @@ const about = {
 const repos = {
   show: true,
   heading: "Recent Projects",
-  gitHubUsername: "hashirshoaeb", //i.e."johnDoe12Gh"
-  reposLength: 4,
-  specificRepos: [],
+  gitHubUsername: "inigovert", 
+  reposLength: 0, 
+  specificRepos: ["Universal-Webscraper", "FitQuestAlpha3", "FlowLow-main", "Bitwise-Bazaar"],
 };
 
 // Leadership SECTION
 const leadership = {
-  show: false,
+  show: true,
   heading: "Leadership",
   message:
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae auctor eu augue ut lectus arcu bibendum at varius. Libero justo laoreet sit amet cursus sit amet. Imperdiet dui accumsan sit amet nulla facilisi morbi. At auctor urna nunc id. Iaculis urna id volutpat lacus laoreet non curabitur gravida. Et magnis dis parturient montes nascetur ridiculus mus mauris. In nisl nisi scelerisque eu ultrices vitae auctor. Mattis nunc sed blandit libero volutpat sed cras ornare. Pulvinar neque laoreet suspendisse interdum consectetur libero.",
+    "I led my college capstone project as project manager, driving the development of a gamified, motion-tracking workout program that earned a nomination for Best Capstone Project of the Year. I also gained valuable experience in a supporting role as an automation developer intern at Reed Elsevier, where I contributed to a larger dev team and honed my skills in collaborative development and process efficiency.",
   images: [
     { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "First slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+      img: require("../editable-stuff/group_pic1.jpg"), 
+      label: "My Capstone Team during College", 
+      paragraph: "Photo taken right after passing the title defense." 
     },
     { 
-      img: require("../editable-stuff/hashirshoaeb.png"), 
-      label: "Second slide label", 
-      paragraph: "Nulla vitae elit libero, a pharetra augue mollis interdum." 
+      img: require("../editable-stuff/group_pic2.jpg"), 
+      label: "My Data Analytics Team during Internship", 
+      paragraph: "Photo taken before conducting team building." 
     },
   ],
   imageSize: {
-    width:"615",
+    width:"900",
     height:"450"
   }
 };
@@ -100,24 +96,24 @@ const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-    { name: "Python", value: 90 },
+    { name: "Python", value: 89 },
+    { name: "Microsoft Excel", value: 85 },
+    { name: "Microsoft Power Bi", value: 75 },
     { name: "SQL", value: 75 },
-    { name: "Data Structures", value: 85 },
-    { name: "C/C++", value: 65 },
-    { name: "JavaScript", value: 90 },
-    { name: "React", value: 65 },
-    { name: "HTML/CSS", value: 55 },
-    { name: "C#", value: 80 },
+    { name: "Microsoft Azure Data Factory", value: 65 },
+    { name: "HTML | CSS | JavaScript", value: 85 },
+    { name: "Laravel", value: 75 },
+    { name: "React", value: 85 },
   ],
   softSkills: [
-    { name: "Goal-Oriented", value: 80 },
-    { name: "Collaboration", value: 90 },
-    { name: "Positivity", value: 75 },
-    { name: "Adaptability", value: 85 },
-    { name: "Problem Solving", value: 75 },
+    { name: "Communication (Written and Verbal)", value: 98 },
+    { name: "Problem-Solving", value: 90 },
+    { name: "Collaboration & Teamwork", value: 85 },
+    { name: "Time Management", value: 95 },
+    { name: "Critical Thinking", value: 85 },
+    { name: "Growth Mindset", value: 90 },
+    { name: "Accountability", value: 80 },
     { name: "Empathy", value: 90 },
-    { name: "Organization", value: 70 },
-    { name: "Creativity", value: 90 },
   ],
 };
 
@@ -126,23 +122,23 @@ const getInTouch = {
   show: true,
   heading: "Get In Touch",
   message:
-    "I'm currently looking for full-time Software Engineering or Machine Learning opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
-  email: "hashirshoaeb@gmail.com",
+    "I'm currently looking for full-time Software Engineering or Data Analytics opportunities! If you know of any positions available, if you have any questions, or if you just want to say hi, please feel free to email me at",
+  email: "igosampaguittap@gmail.com",
 };
 
 const experiences = {
-  show: false,
+  show: true,
   heading: "Experiences",
   data: [
     {
-      role: 'Software Engineer',// Here Add Company Name
-      companylogo: require('../assets/img/dell.png'),
-      date: 'June 2018 – Present',
+      role: 'Reed Elsevier Automation Developer Intern',
+      companylogo: require('../assets/img/Reed_Elsevier_Logo.png'),
+      date: 'May 2025 – July 2025 (520 hours)',
     },
     {
-      role: 'Front-End Developer',
-      companylogo: require('../assets/img/boeing.png'),
-      date: 'May 2017 – May 2018',
+      role: 'Invisible Hand Software Engineer Intern',
+      companylogo: require('../assets/img/invisible_hand_logo.png'),
+      date: 'December 2024 – April 2025 (520 hours)',
     },
   ]
 }
