@@ -96,11 +96,11 @@ const skills = {
   show: true,
   heading: "Skills",
   hardSkills: [
-    { name: "Python", value: 89 },
+    { name: "Google Sheets", value: 70 },
     { name: "Microsoft Excel", value: 85 },
     { name: "Microsoft Power Bi", value: 75 },
     { name: "SQL", value: 75 },
-    { name: "Google Sheets", value: 65 },
+    { name: "Python", value: 85 },
     { name: "HTML | CSS | JavaScript", value: 85 },
     { name: "Laravel", value: 75 },
     { name: "React", value: 85 },
