@@ -19,24 +19,25 @@ const Leadership = ({ heading, message, img, imageSize }) => {
             {img.map((value, index) => {
               return (
                 <Carousel.Item key={index}>
-                  <img
-                    className="d-block w-100"
-                    src={value.img}
-                    alt="First slide"
-                    width={imageSize.width}
-                    height={imageSize.height}
-                  />
+                  <div className="carousel-image-container">
+                    <img
+                      className="d-block w-100 carousel-image"
+                      src={value.img}
+                      alt={value.label || "Leadership image"}
+                    />
+                  </div>
                   <Carousel.Caption
-                  style={{
-                        fontSize: '1rem',
-                        background: 'rgba(0, 0, 0, 0.7)',
-                        borderRadius: '8px',
-                        padding: '5px 10px',
-                        bottom: '20px',
-                        left: '50%',
-                        right: 'auto',
-                        transform: 'translateX(-50%)',
-                        maxWidth: '90%'
+                    className="responsive-caption"
+                    style={{
+                      fontSize: '1rem',
+                      background: 'rgba(0, 0, 0, 0.7)',
+                      borderRadius: '8px',
+                      padding: '5px 10px',
+                      bottom: '40px',
+                      left: '50%',
+                      right: 'auto',
+                      transform: 'translateX(-50%)',
+                      maxWidth: '90%'
                     }}>
                     <h3>{value.label}</h3>
                     <p>

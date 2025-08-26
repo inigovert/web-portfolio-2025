@@ -82,10 +82,34 @@ code {
   }
 }
 
+/* Fixed height approach - use ONLY height, not max-height */
 .company-logo {
-  width: 500px;
-  height: 250px;
-  object-fit: contain; /* or cover, depending on your needs */
+  height: 120px; /* Fixed height for alignment */
+  width: auto;   /* Auto width maintains aspect ratio */
+  max-width: 280px; /* Prevent overly wide logos */
+  object-fit: contain;
+  transition: transform 0.2s ease;
+  margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .company-logo {
+    height: 80px;
+    max-width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .company-logo {
+    height: 60px;
+    max-width: 150px;
+  }
+}
+
+/* Hover effect */
+.company-logo:hover {
+  transform: scale(1.05);
 }
 
 .title {
@@ -104,6 +128,103 @@ code {
   }
   @media (min-width: 768px) {
     min-height: 2.5rem;
+  }
+}
+
+/* Carousel image container with fixed aspect ratio */
+.carousel-image-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 60%; /* Adjust this to match your desired aspect ratio */
+  overflow: hidden;
+  border-radius: 8px; /* Optional: rounded corners */
+}
+
+.carousel-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Maintains aspect ratio, crops if necessary */
+}
+
+/* Alternative: If you want to show the full image without cropping */
+.carousel-image-contain {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Shows full image, may have letterboxing */
+  background: #f8f9fa; /* Light background for letterbox areas */
+}
+
+/* Responsive carousel caption styles */
+.responsive-caption {
+  font-size: 1rem !important;
+}
+
+.responsive-caption h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.responsive-caption p {
+  font-size: 0.9rem;
+  margin-bottom: 0;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 768px) {
+  .carousel-image-container {
+    padding-bottom: 70%; /* Slightly taller on mobile */
+  }
+  
+  /* Smaller caption on tablets */
+  .responsive-caption {
+    font-size: 0.875rem !important;
+    padding: 4px 8px !important;
+    bottom: 15px !important;
+  }
+  
+  .responsive-caption h3 {
+    font-size: 1.1rem;
+  }
+  
+  .responsive-caption p {
+    font-size: 0.8rem;
+  }
+  
+  /* Stack layout on mobile */
+  .row .col-md-5,
+  .row .col-md-7 {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .carousel-image-container {
+    padding-bottom: 75%; /* Even taller on small mobile */
+  }
+  
+  /* Much smaller caption on mobile */
+  .responsive-caption {
+    font-size: 0.75rem !important;
+    padding: 3px 6px !important;
+    bottom: 10px !important;
+    max-width: 95% !important;
+  }
+  
+  .responsive-caption h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+  }
+  
+  .responsive-caption p {
+    font-size: 0.7rem;
+    line-height: 1.2;
   }
 }
 
