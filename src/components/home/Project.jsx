@@ -14,8 +14,7 @@ const dummyProject = {
   pushed_at: null,
 };
 const API = "https://api.github.com";
-// const gitHubQuery = "/repos?sort=updated&direction=desc";
-// const specficQuerry = "https://api.github.com/repos/hashirshoaeb/";
+const GITHUB_TOKEN = process.env.REACT_APP_GITHUB_TOKEN;
 
 const Project = ({ heading, username, length, specfic }) => {
   const allReposAPI = `${API}/users/${username}/repos?sort=updated&direction=desc`;
@@ -27,28 +26,49 @@ const Project = ({ heading, username, length, specfic }) => {
   const [projectsArray, setProjectsArray] = useState([]);
 
   const fetchRepos = useCallback(async () => {
+    // Move config inside the function
+    const config = GITHUB_TOKEN ? {
+      headers: {
+        'Authorization': `token ${GITHUB_TOKEN}`,
+        'Accept': 'application/vnd.github.v3+json'
+      }
+    } : {};
+
+    console.log("Using token:", GITHUB_TOKEN ? "Yes" : "No"); // Debug log
+
     let repoList = [];
     try {
-      // getting all repos
-      const response = await axios.get(allReposAPI);
+      // First API call
+      const response = await axios.get(allReposAPI, config);
+      
+      // Log rate limit info
+      console.log("Rate limit remaining:", response.headers['x-ratelimit-remaining']);
+      
       // slicing to the length
       repoList = [...response.data.slice(0, length)];
+      
       // adding specified repos
       try {
         for (let repoName of specfic) {
-          const response = await axios.get(`${specficReposAPI}/${repoName}`);
+          const response = await axios.get(`${specficReposAPI}/${repoName}`, config);
           repoList.push(response.data);
         }
       } catch (error) {
-        console.error(error.message);
+        console.error("Error fetching specific repo:", error.message);
       }
+      
       // setting projectArray
-      // TODO: remove the duplication.
       setProjectsArray(repoList);
+      console.log("Successfully loaded", repoList.length, "projects");
+      
     } catch (error) {
-      console.error(error.message);
+      console.error("API Error:", error.message);
+      if (error.response) {
+        console.error("Response status:", error.response.status);
+        console.error("Response data:", error.response.data);
+      }
     }
-  }, [allReposAPI, length, specfic, specficReposAPI]);
+  }, [allReposAPI, length, specfic, specficReposAPI]); // GITHUB_TOKEN is constant, no need to include
 
   useEffect(() => {
     fetchRepos();
